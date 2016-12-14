@@ -4,11 +4,11 @@
 1.This is my last project, the Neighborhood map which displays the best amusement parks in America.
 
 ##HOW TO USE##
-1.Extract the zip file and open index.html to view the christmas special amusement parks map.
-2.The whole page is of 3 rows where the top most consists of headings, second one consisting details of the amusement parks with a beautiful image and the third row is the map.
-3.You can type the name of the amusement park in search box or select the name of the park listed below the search box.
-4.You can also get into the map directly and select any one of the santa claus markers to find the location of the amusement park.
-5.By clicking the satellite view u can go deeper to get a top view of the amusement park.
+- Extract the zip file and open index.html to view the christmas special amusement parks map.
+- The whole page is of 3 rows where the top most consists of headings, second one consisting details of the amusement parks with a beautiful image and the third row is the map.
+- You can type the name of the amusement park in search box or select the name of the park listed below the search box.
+-You can also get into the map directly and select any one of the santa claus markers to find the location of the amusement park.
+-By clicking the satellite view u can go deeper to get a top view of the amusement park.
 
 ##SOURCES##
 1.I got a clear view when I pencil sketched the map on how it should be, and then I applied my knowledge from my previous project "BUILD A PORTFOLIO SITE".
