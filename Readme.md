@@ -14,7 +14,7 @@
 - I got a clear view when I pencil sketched the map on how it should be, and then I applied my knowledge from my previous project "BUILD A PORTFOLIO SITE".
 - Also in "ONLINE RESUME" project, the map was displayed at the bottom, and so I applied the same by displaying the map in the Last row of the page.
 - For Google API key, I went through "https://developers.google.com/maps/documentation/" which was very helpful in displaying the map.(I used the API key which I used in my online resume project)
-- Libraries such as Knockout and jquery were very helpful in different functions such as binding functions.
+- Libraries such as Knockout and jquery were very helpful in different functions such as binding functions and place marker functions.
 - The wikipedia API was also helpful in displaying the information regarding the amusement parks displayed in the map.
 - StackOverflow site was also helpful in giving a good documentation in Scrolling bar, that was in needed when there are many list of items to be displayed.
 - Thanks to Google images for getting high definition image fot the page and Google Fonts for a variety of stylish fonts which I had applied.
