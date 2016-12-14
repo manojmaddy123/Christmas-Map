@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Map</title>
+	  <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+
+  </main
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-right">
+        <h1 class="title-super text-thin  text-uppercase">Merry Christmas Everyone..!!</h1>
+        <h4>A Manoj Mapwork</h4>
+      </div>
+    </div>
+         <div class ="row">
+         <div class="col-md-4">
+            <input type="text" class="typeIn" data-bind="textInput: discoverable">
+          <div id="list" class= "scroll">
+               <ul data-bind="foreach: discovery">
+                  <li data-bind="text: title, click: $parent.clickOver"></li>
+               </ul>
+          </div>
+        </div>
+        <div class= "col-md-8">
+          <img class="imagexmas" src="img/holiday.jpg" alt="Merry Xmas!">
+          <p>Enjoy your Christmas with the Best Amusement Parks in the Country..!!</p>
+        </div>
+
+     </div>
+       <div class="row">
+       <div id="map" class="col-md-12 "></div>
+     </div>
+
+         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+         <script src="js/knockout-3.4.1.js"></script>
+         <script src="js/main.js"></script>
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHvM8tg5AWjGXnavl5Bf6OOXmXQwN3pSI&callback=initMap"></script>
+         <script onerror="error()"></script>
+
+      </body>
+
+   </html>

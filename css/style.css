@@ -1,0 +1,119 @@
+html,
+body {
+    font-family: 'Lato', sans-serif;
+	height: 100%;
+	color: rgb(255, 252, 65) ;
+  	font-weight: 250;
+    background-image: url("http://freedesignfile.com/upload/2012/12/Christmas_bckgr_012.jpg");
+}
+
+.container {
+  margin: auto;
+  padding: 0;
+  border: 0;
+}
+
+.scroll {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin: 0 5px;
+}
+
+
+.text-thin{
+	font-weight:900;
+}
+.title-super{
+	font-size: 75px;
+}
+
+h1 {
+	font-family: 'Arvo', serif;
+	text-align: center;
+    margin: 20px;
+}
+h4 {
+    font-family: 'Molle', cursive;
+    font-size: 40px;
+    margin: 5px;
+    color:rgb(255, 252, 65);
+}
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+a {
+    font-family: 'Molle', cursive;
+    color: blue;
+  }
+.popWindow {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color:red;
+}
+
+#list {
+    font-family: 'Molle', cursive;
+    padding: 7px;
+    line-height: 50px;
+    cursor: pointer;
+    margin-top: 8px;
+    rgb(255, 252, 65)
+}
+ul {
+    list-style-type: disc;
+    font-size: 22px;
+   cursor: pointer;
+   font-style: italic;
+
+}
+#map {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 10px;
+    margin: 20px;
+  }
+.imagexmas {
+  max-width: 100%;
+  padding: 5;
+  margin: 5;
+  left:100px;
+}
+
+.typeIn{
+    font-family: 'Molle', cursive;
+    color: rgb(255, 252, 65);
+    width: 300px;
+    cursor: auto;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 800px) {
+    /* To ensure that map only does not occupy entire screen space in iPad & mobile*/
+    #map {
+        min-height: 300px;
+        max-height: 500px;
+    }
+   .imagexmas,p,h1{
+        display: none;
+    }
+
+    h4 {
+        font-family: 'Molle', cursive;
+        text-align: center;
+        font-size: 25px;
+        margin: 5px;
+        color: rgb(255, 252, 65);
+    }
+}
