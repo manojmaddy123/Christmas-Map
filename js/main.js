@@ -1,3 +1,5 @@
+//Welcome to the Christmas Special Neighborhood Map.
+//Initializing variables required for map functions.
 var map;
 var marker;
 var popupInfo;
@@ -51,16 +53,18 @@ var amusementParks = [{
         lng: -81.5639
     },
 
-  }];
+}];
+
+//This is the Map Initialization Function
 function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
-       center: {
-           lat: 37.0902,
-           lng: -95.7129
-       },
-       zoom: 4
-   });
+        center: {
+            lat: 37.0902,
+            lng: -95.7129
+        },
+        zoom: 4
+    });
 
     popupInfo = new google.maps.InfoWindow();
 
@@ -72,11 +76,11 @@ function initMap() {
             position: position,
             title: parks,
             icon: {
-              url:'img/santmarker.png'
+                url: 'img/santmarker.png'
             },
             animation: google.maps.Animation.DROP,
             info: amusementParks[i].popupInfo
-            });
+        });
         amusementParks[i].dropPin = marker;
         marker.addListener('click', function() {
             infowindow(this, popupInfo);
@@ -84,32 +88,32 @@ function initMap() {
     }
 };
 
-//Opens Wiki-Info on CLicking the marker
 
+//Function to open the wikipedia link when clicking the location marker.
 function infowindow(marker, popupInfo) {
-    //Associating marker with Wikipedia API
 
     var marker = marker;
     var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title + '&format=json&callback=wikiCallback';
     $.ajax({
         url: wikiUrl,
-        dataType: "jsonp",}).done(function(response) {
+        dataType: "jsonp",
+    }).done(function(response) {
         var wikiVar = response[0];
         var url = 'http://en.wikipedia.org/wiki/' + wikiVar;
-            if (popupInfo.marker != marker) {
-                popupInfo.marker = marker;
-                marker.addListener('click', toggleBounce(marker));
-                popupInfo.setContent('<div class="popWindow">' + marker.title + '</div><br><a href="' + url + '">' + wikiVar + '</a>');
-                popupInfo.open(map, marker);
-                popupInfo.addListener("closeclick", function() {});
-            }
+        if (popupInfo.marker != marker) {
+            popupInfo.marker = marker;
+            marker.addListener('click', toggleBounce(marker));
+            popupInfo.setContent('<div class="popWindow">' + marker.title + '</div><br><a href="' + url + '">' + wikiVar + '</a>');
+            popupInfo.open(map, marker);
+            popupInfo.addListener("closeclick", function() {});
+        }
 
-        }).fail(function(jqXHR, textStatus) {
-            alert("Failed to get wikipedia resources.Check the network connection!");
-      });
+    }).fail(function(jqXHR, textStatus) {
+        alert("Sorry for the inconvenience, Please check your Internet Connection");
+    });
 
-  };
-
+};
+//Function to set an Bouncing animation on the marker when clicked.
 function toggleBounce(marker) {
     if (marker.getAnimation() !== null) {
         marker.setAnimation(null);
@@ -121,11 +125,11 @@ function toggleBounce(marker) {
     }
 }
 
-var ViewModal = function() {
+var ViewModal = function() { //Function to display markers and the default zoom.
     var self = this;
     self.amusementParks = ko.observable(amusementParks);
-    self.clickOver = function(amusementParks) { // Makes the marker available for display
-        map.setZoom(12); // Zoom is Set on Google Maps.
+    self.clickOver = function(amusementParks) {
+        map.setZoom(12);
         map.setCenter(amusementParks.location);
         infowindow(amusementParks.dropPin, popupInfo);
     };
@@ -150,11 +154,11 @@ var ViewModal = function() {
 
 };
 
-// If Google Map fails to load...Browser Throws window alert..
+//Function to throw a Message When the google maps fail to load.
 var error = function() {
-    alert('Ahhhhhhh.. Snap.....Google Maps hates slowwwwww server');
+    alert('Sorry for the inconvenience, Please check your Internet Connection');
 };
 
 
-// Activates knockout.js
+//Function to call knockout.js file.
 ko.applyBindings(new ViewModal());

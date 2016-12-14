@@ -20,6 +20,7 @@
 - Thanks to Google images for getting high definition image fot the page and Google Fonts for a variety of stylish fonts which I had applied.
 - Thanks to my Udacity-stack friends who gave me a clear idea when I was stuck with the overall responsiveness of the page.
 - Apart from all online image compressing webites and css minifier sites also had been helpful throughout the project.
+- Finally the JsBeautfier site was helpful in setting the code in a perfect manner.
 
 ##FEATURES OF THE MAP##
 - The search bar is diplayed on the left of the page where you can enter the name of the amusement park and check its details in the map.
